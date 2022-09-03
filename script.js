@@ -108,12 +108,9 @@ percentBox.forEach((box) => {
 function percentBoxStyle(event) {
   percentBox.forEach((box) => {
     box.classList.remove("box-active");
-
-    if (event.target.innerHTML === box.innerHTML) {
-      box.classList.add("box-active");
-      tipValue = parseFloat(box.innerHTML);
-    }
   });
+  event.target.classList.add("box-active");
+  tipValue = parseFloat(event.target.innerHTML);
 
   calculateResults();
 }
